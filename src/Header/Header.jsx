@@ -1,7 +1,15 @@
+import React from 'react';
+import NombreHeader from './NombreHeader';
+import NavHeader from './NavHeader';
+import Redes from './Redes';
+
 function Header() {
   return (
     <>
-      <h1>Hola mundo</h1>
+      <NombreHeader></NombreHeader>
+      <NavHeader></NavHeader>
+      <Redes></Redes>
+
     </>
   )
 }

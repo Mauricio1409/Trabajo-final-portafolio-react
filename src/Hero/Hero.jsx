@@ -1,7 +1,12 @@
+import React from "react"
+import TituloHero from "./TituloHero"
+import CuadroPrincipal from "./CuadroPrincipal"
+
 function Hero() {
     return (
       <>
-        <h1>Hola soy el hero</h1>
+        <TituloHero></TituloHero>
+        <CuadroPrincipal></CuadroPrincipal>
       </>
     )
   }
