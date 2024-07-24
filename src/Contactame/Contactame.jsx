@@ -1,8 +1,10 @@
+import React from "react"
+import ContenedroContactame from "./ContenedorContactame"
+
+
 function Contactame() {
     return (
-      <>
-        <h1>Hola Soy la seccion Contactame</h1>
-      </>
+      <ContenedroContactame></ContenedroContactame>
     )
   }
   

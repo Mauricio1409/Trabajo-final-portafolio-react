@@ -1,7 +1,16 @@
+import React from "react"
+import PartesHabilidades from "./PartesHabilidades"
+import MiraMisProyectos from "./MiraMisProyectos"
+
 function Skills() {
+
     return (
       <>
-        <h1>Seccion skills</h1>
+        <PartesHabilidades></PartesHabilidades>
+        <PartesHabilidades></PartesHabilidades>
+        <PartesHabilidades></PartesHabilidades>
+        <PartesHabilidades></PartesHabilidades>
+        <MiraMisProyectos></MiraMisProyectos>
       </>
     )
   }

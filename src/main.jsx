@@ -6,14 +6,16 @@ import Skills from './Habilidades/Skills.jsx'
 import Footer from './Footer/Footer.jsx'
 import Contactame from './Contactame/Contactame.jsx'
 import SobreMi from './SobreMi/SobreMi.jsx'
+import Proyectos from './Proyectos/Proyectos.jsx'
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Header />
     <Hero />
-    <SobreMi></SobreMi>
+    <SobreMi/>
     <Skills />
+    <Proyectos/>
     <Contactame />
     <Footer />
   </React.StrictMode>,
