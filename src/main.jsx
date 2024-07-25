@@ -7,10 +7,12 @@ import Footer from './Footer/Footer.jsx'
 import Contactame from './Contactame/Contactame.jsx'
 import SobreMi from './SobreMi/SobreMi.jsx'
 import Proyectos from './Proyectos/Proyectos.jsx'
+import { ChakraProvider } from "@chakra-ui/react";
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
+  <ChakraProvider>
+    <React.StrictMode>
     <Header />
     <Hero />
     <SobreMi/>
@@ -19,4 +21,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <Contactame />
     <Footer />
   </React.StrictMode>,
+  </ChakraProvider>
+  
 )
