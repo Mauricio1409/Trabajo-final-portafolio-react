@@ -1,28 +1,29 @@
 import React from 'react'
+import { Box, Flex, Text } from '@chakra-ui/react'
 
 export default function PartesHabilidades(props) {
   return (
-    <>
-        <div class="nombre-seccion color-lenguajes"><h3>{props.titulo}</h3></div>
+    <Flex h="23%" justifyContent="space-between" alignItems="end" bg={props.colorfondo} color={props.colorletras}>
+        <Box class="nombre-seccion color-lenguajes" width="33%"><Text as="h3">{props.titulo}</Text></Box>
                 
-                <div class="lenguajes">
-                    <div class="seccion-media-habilidades">
+                <Flex class="lenguajes" justifyContent="center" alignItems="center" width="33%" textAlign="center">
+                    <Box class="seccion-media-habilidades">
                         <svg>
                             <path>{props.urlsvguno}</path>
                         </svg>
                         <p class="color-lenguajes">{props.lenguajeuno}</p>
-                    </div>
-                    <div class="seccion-media-habilidades">
+                    </Box>
+                    <Box class="seccion-media-habilidades">
                         <svg>
                             <path>{props.urlsvgdos}</path>
                         </svg>
                         <p class="color-lenguajes">{props.lenguajedos}</p>
-                    </div>
-                </div>
-                <div class="numero-de-seccion color-lenguajes">
+                    </Box>
+                </Flex>
+                <Box class="numero-de-seccion color-lenguajes" width="33%" textAlign="end">
                     <h3>{props.numero}</h3>
-                </div>
+                </Box>
                 
-    </>
+    </Flex>
   )
 }
