@@ -2,12 +2,12 @@ import React from 'react';
 import { Box } from '@chakra-ui/react';
 import NombresLenguajes from './DivisionLenguajes/NombresLenguajes';
 import TextoLenguajes from './DivisionLenguajes/TextoLenguajes';
-import Foto from '../../../assets/Foto.png'
+import Foto from '../../../assets/Foto.png';
 
 export default function ParteLenguajes() {
   return (
     <Box 
-      width="70%" 
+      width={{ base: "100%", md: '70%' }} 
       backgroundColor="#262626" 
       display="flex" 
       flexDirection="column" 
@@ -17,7 +17,6 @@ export default function ParteLenguajes() {
     >
       <NombresLenguajes urlimg={Foto} />
       <TextoLenguajes />
-      
     </Box>
   );
 }

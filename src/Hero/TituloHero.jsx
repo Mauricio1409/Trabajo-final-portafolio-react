@@ -1,14 +1,12 @@
 import React from 'react';
 import { Box, Heading, Text } from '@chakra-ui/react';
 
-
-
 export default function TituloHero() {
-  let nombre = "Mauricio Torti {dev}"
+  let nombre = "Mauricio Torti {dev}";
   return (
     <Box 
       margin="30px" 
-      width="70%" 
+      width={{ base: "90%", md: "70%" }} 
       display="flex" 
       flexDirection="column" 
       justifyContent="center" 
@@ -21,25 +19,29 @@ export default function TituloHero() {
         justifyContent="center"
         alignItems="center"
       >
-        <Heading as="h1" fontWeight="900" fontSize="60px">DESARROLLADOR FULL STACK</Heading>
+        <Heading 
+          as="h1" 
+          fontWeight="900" 
+          fontSize={{ base: "30px", md: "60px" }}
+        >
+          DESARROLLADOR FULL STACK
+        </Heading>
         <Box 
           backgroundColor="#BFE6AD" 
           width="20px" 
-          height="10vh" 
-        ></Box>
+          height={{ base: "5vh", md: "10vh" }} 
+        />
       </Box>
       <Box 
         display='flex'
         alignItems= "start"
         paddingLeft= "5%"
-        fontSize="15px"
+        fontSize={{ base: "12px", md: "15px" }}
         color="#F9F4DA"
-        w="130px"
-
+        w={{ base: "100px", md: "130px" }}
       >
         <Text>{nombre}</Text>
       </Box>
     </Box>
   );
 }
-

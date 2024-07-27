@@ -6,10 +6,11 @@ import ParteRedes from './ParteRedes/ParteRedes';
 export default function CuadroPrincipal() {
   return (
     <Box
-      width="75%"
-      height="50vh"
+      width={{ base: "100%", md: '75%' }}
+      height={{ base: "auto", md: "50vh" }}
       backgroundColor="#BFE6AD"
       display="flex"
+      flexDirection={{ base: "column", md: "row" }}
       margin="30px"
       marginTop="50px"
     >

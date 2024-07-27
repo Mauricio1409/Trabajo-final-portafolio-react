@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Flex, Text, Link, Icon } from '@chakra-ui/react';
+import { Flex, Text, Link, Icon } from '@chakra-ui/react';
 import { BiRightArrow } from 'react-icons/bi';
 import { FaLinkedin, FaGithub, FaInstagram } from 'react-icons/fa';
 
@@ -20,18 +20,12 @@ export default function ParteIconosRedes() {
         alignItems="flex-end"
         flexDirection="column"
       >
-        <Flex className="redes" margin="15px 5px">
-          <Text marginRight="5px">LINKEDIN</Text>
-          <Icon as={BiRightArrow} width="16px" height="16px" />
-        </Flex>
-        <Flex className="redes" margin="15px 5px">
-          <Text marginRight="5px">GITHUB</Text>
-          <Icon as={BiRightArrow} width="16px" height="16px" />
-        </Flex>
-        <Flex className="redes" margin="15px 5px">
-          <Text marginRight="5px">INSTAGRAM</Text>
-          <Icon as={BiRightArrow} width="16px" height="16px" />
-        </Flex>
+        {["LINKEDIN", "GITHUB", "INSTAGRAM"].map((item, index) => (
+          <Flex className="redes" margin="15px 5px" key={index}>
+            <Text marginRight="5px">{item}</Text>
+            <Icon as={BiRightArrow} width="16px" height="16px" />
+          </Flex>
+        ))}
       </Flex>
       <Flex
         width="25%"
@@ -44,45 +38,25 @@ export default function ParteIconosRedes() {
         flexDirection="column"
         justifyContent="center"
       >
-        <Link href="https://www.linkedin.com/in/mauricioiv%C3%A1ntorti/" isExternal>
-          <Flex
-            backgroundColor="white"
-            height="30px"
-            width="30px"
-            margin="10px"
-            borderRadius="50%"
-            justifyContent="center"
-            alignItems="center"
-          >
-            <Icon as={FaLinkedin} width="16px" height="16px" fill="black" />
-          </Flex>
-        </Link>
-        <Link href="https://github.com/Mauricio1409" isExternal>
-          <Flex
-            backgroundColor="white"
-            height="30px"
-            width="30px"
-            margin="10px"
-            borderRadius="50%"
-            justifyContent="center"
-            alignItems="center"
-          >
-            <Icon as={FaGithub} width="16px" height="16px" fill="black" />
-          </Flex>
-        </Link>
-        <Link href="https://www.instagram.com/mauri_torti/" isExternal>
-          <Flex
-            backgroundColor="white"
-            height="30px"
-            width="30px"
-            margin="10px"
-            borderRadius="50%"
-            justifyContent="center"
-            alignItems="center"
-          >
-            <Icon as={FaInstagram} width="16px" height="16px" fill="black" />
-          </Flex>
-        </Link>
+        {[
+          { href: "https://www.linkedin.com/in/mauricioiv%C3%A1ntorti/", icon: FaLinkedin },
+          { href: "https://github.com/Mauricio1409", icon: FaGithub },
+          { href: "https://www.instagram.com/mauri_torti/", icon: FaInstagram },
+        ].map((link, index) => (
+          <Link href={link.href} isExternal key={index}>
+            <Flex
+              backgroundColor="white"
+              height="30px"
+              width="30px"
+              margin="10px"
+              borderRadius="50%"
+              justifyContent="center"
+              alignItems="center"
+            >
+              <Icon as={link.icon} width="16px" height="16px" fill="black" />
+            </Flex>
+          </Link>
+        ))}
       </Flex>
     </Flex>
   );

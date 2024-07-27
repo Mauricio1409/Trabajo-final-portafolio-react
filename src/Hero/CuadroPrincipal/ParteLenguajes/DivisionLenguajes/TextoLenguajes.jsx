@@ -12,6 +12,8 @@ export default function TextoLenguajes() {
       justifyContent="space-between"
       alignItems="center"
       color="#181B15"
+      fontWeight="1000"
+      fontSize={{ base: "10px", md: "12px" }}
     >
       <Box>
         <BsArrowDown size={16} />
@@ -27,4 +29,3 @@ export default function TextoLenguajes() {
     </Flex>
   );
 }
-

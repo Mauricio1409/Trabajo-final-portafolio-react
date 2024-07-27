@@ -12,7 +12,7 @@ function Hero() {
       justifyContent="center"
       alignItems="center"
       marginTop="10vh"
-      bg= "#141A12"
+      bg="#141A12"
     >
       <TituloHero />
       <CuadroPrincipal />
