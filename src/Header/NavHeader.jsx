@@ -5,42 +5,26 @@ export default function NavHeader() {
   return (
     <Box
       as='nav'
-      display="Flex"
-      margin="0 5px" // Corregido: espaciado correcto
+      display="flex"
+      margin="0 5px"
       color="#BFE6AD"
-      fontSize="10px" // Usar camelCase en lugar de guiones
-      justifyContent="center"
-      alignItems="center" 
-    >
-      <Box
-          p="2px 5px"
-         _hover={{ bg: '#BEE5AC', color: '#141A12' }}
-          transition="1.5s"
-      >
-      <Link href="#hero" textDecor="none" >Home</Link> {/* Corregido: Usar Link de Chakra UI y props para estilos */}
-      </Box>
-      <Box
-          p="2px 5px"
-         _hover={{ bg: '#BEE5AC', color: '#141A12' }}
-      transition="1.5s"
-      >
-      <Link href="#sobre-mi" textDecor="none" >Sobre mi</Link>
-      </Box>
-      <Box
-          p="2px 5px"
-         _hover={{ bg: '#BEE5AC', color: '#141A12' }}
-      transition="1.5s"
-      >
-      <Link href="#seccion-trabajos" textDecor="none" >Mis proyectos</Link>
-      </Box>
-      <Box
 
+      justifyContent="center"
+      alignItems="center"
+    >
+      {['#Hero', '#Sobre-mi', '#Trabajos', '#Contactame'].map((href, index) => (
+        <Box
+          key={index}
           p="2px 5px"
-         _hover={{ bg: '#BEE5AC', color: '#141A12' }}
-      transition="1.5s"
-      >
-      <Link href="#Seccion-contactame" textDecor="none">Contactame</Link>
-      </Box> 
+          _hover={{ bg: '#BEE5AC', color: '#141A12' }}
+          transition="1.5s"
+          mx="10px"
+        >
+          <Link href={href} textDecor="none">
+            {href.split('#')[1].replace('-', ' ')}
+          </Link>
+        </Box>
+      ))}
     </Box>
   );
 }
