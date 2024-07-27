@@ -9,50 +9,50 @@ export default function ImagenesProyectos(props) {
           src={props.linkuno}
           alt=""
           className="imagen-trabajos"
-          w="300px"
-          h="200px"
+          w="500px"
+          h="35vh"
           m="15px 5px"
           cursor="pointer"
           transition="1.5s"
-          _hover={{ w: '500px', h: '250px' }}
+          _hover={{ w: '530px', h: '37vh' }}
           bg="blue"
         />
         <Image
-          src={props.linkdos}
+          src={props.linkuno}
           alt=""
           className="imagen-trabajos"
-          w="300px"
-          h="200px"
+          w="500px"
+          h="35vh"
           m="15px 5px"
           cursor="pointer"
           transition="1.5s"
-          _hover={{ w: '500px', h: '250px' }}
+          _hover={{ w: '530px', h: '37vh' }}
           bg="blue"
         />
       </Box>
       <Box display="flex">
         <Image
-          src={props.linktres}
+          src={props.linkuno}
           alt=""
           className="imagen-trabajos"
-          w="300px"
-          h="200px"
+          w="500px"
+          h="35vh"
           m="15px 5px"
           cursor="pointer"
           transition="1.5s"
-          _hover={{ w: '500px', h: '250px' }}
+          _hover={{ w: '530px', h: '37vh' }}
           bg="blue"
         />
         <Image
-          src={props.linkcuatro}
+          src={props.linkuno}
           alt=""
           className="imagen-trabajos"
-          w="300px"
-          h="200px"
+          w="500px"
+          h="35vh"
           m="15px 5px"
           cursor="pointer"
           transition="1.5s"
-          _hover={{ w: '500px', h: '250px' }}
+          _hover={{ w: '530px', h: '37vh' }}
           bg="blue"
         />
       </Box>

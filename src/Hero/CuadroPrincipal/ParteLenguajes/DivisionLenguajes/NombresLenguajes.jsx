@@ -17,18 +17,19 @@ export default function NombresLenguajes(props) {
         <Heading as="h2" margin="5px 0" fontWeight="1000">JAVASCRIPT</Heading>
         <Flex width="50%" alignItems="center">
           <Text fontSize="12px" marginTop="30px" fontWeight="1000">Y MAS</Text>
-          <Divider orientation="vertical" height="20px" backgroundColor="#a0cfa0" marginLeft="10px" />
-          <Divider orientation="horizontal" flex="1" backgroundColor="#a0cfa0" marginLeft="10px" />
         </Flex>
       </Flex>
       <Box 
         width="100%" 
         display="flex" 
-        justifyContent="center" 
+        justifyContent="end" 
         alignItems="center" 
         textAlign="end"
       >
-        <Image src={props.foto} alt="" width="50%" height="50%" />
+        
+        <Image  as="img" src={props.urlimg} alt="Mi foto" width="70%" height="70%"/>
+
+
       </Box>
     </Flex>
   );

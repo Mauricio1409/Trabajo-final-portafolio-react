@@ -1,29 +1,35 @@
 import React from 'react'
-import { Box, Flex } from '@chakra-ui/react'
+import { Box, Flex, Text } from '@chakra-ui/react'
 
 export default function NombreHeader() {
   return (
-    <Flex color = "#BFE6AD"
-      width= "130px"
-      height = "50px">
-
-      <Box width = "50%"
-        font-size = "10px"
-        >
-          <p>Mauricio Torti</p>
-
+    <Flex
+      className="nombre"
+      color="#BFE6AD"
+      w="130px"
+      h="50px"
+      alignItems="center"
+    >
+      <Box
+        className="nombre-imagen"
+        h="40%"
+        w="50%"
+        bg="#BFE6AD"
+        m="5px"
+        borderTopRightRadius="25%"
+        borderBottomRightRadius="25%"
+      />
+      <Box
+        className="nombre-texto"
+        w="50%"
+        fontSize="10px"
+        display="flex"
+        alignItems="center"
+        justifyContent="center"
+      >
+        <Text>Mauricio Torti</Text>
       </Box>
-      <Box height = "20px"
-        width = "50%"
-        background-color = "#BFE6AD"
-        margin = "5px"
-        border-top-right-radius = "25%"
-        border-bottom-right-radius = "25%">
-
-      </Box>
-      
     </Flex>
-      
 
   )
 }

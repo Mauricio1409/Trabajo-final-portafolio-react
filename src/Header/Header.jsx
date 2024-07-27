@@ -12,9 +12,9 @@ function Header() {
       justifyContent="space-around"
       fontWeight="900"
       position="fixed"
-      width="100vw"
+      w="100vw"
+      h="10vh"
       bg="#141A12"
-      height="5vh"
       top="0"
       zIndex="1000" // Puedes ajustar el zIndex si es necesario
     >

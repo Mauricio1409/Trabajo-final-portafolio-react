@@ -6,13 +6,12 @@ import CuadroPrincipal from "./CuadroPrincipal/CuadroPrincipal";
 function Hero() {
   return (
     <Box
-      paddingTop="30px"
+      paddingTop="5vh"
       display="flex"
       flexDirection="column"
       justifyContent="center"
       alignItems="center"
-      fontWeight="900"
-      marginTop="30px"
+      marginTop="10vh"
       bg= "#141A12"
     >
       <TituloHero />

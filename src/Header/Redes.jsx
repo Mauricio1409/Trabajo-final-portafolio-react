@@ -1,14 +1,14 @@
 import React from 'react';
-import { Box, Link} from '@chakra-ui/react';
+import { Box, Center, Link} from '@chakra-ui/react';
 import { ArrowForwardIcon } from '@chakra-ui/icons';
 
 export default function Redes() {
   return (
-    <Box display="flex">
+    <Box display="flex" justifyContent="Center" alignItems="Center">
       <Box
         display="flex"
         alignItems="center"
-        mx={1} // margin horizontal de 5px
+        mx={1}
         _hover={{ bg: '#BEE5AC', color: '#141A12' }}
         transition="1.5s"
         height="25%"
