@@ -1,61 +1,57 @@
-import React from 'react'
-import { Box, Image } from '@chakra-ui/react'
+import React from 'react';
+import { Box, Image } from '@chakra-ui/react';
 
 export default function ImagenesProyectos(props) {
   return (
     <>
-      <Box display="flex">
+      <Box display="flex" flexDirection={{ base: 'column', md: 'row' }} flexWrap="wrap" justifyContent="center">
         <Image
           src={props.linkuno}
           alt=""
           className="imagen-trabajos"
-          w="500px"
-          h="35vh"
-          m="15px 5px"
+          w={{ base: '80vw', md: '45%' }}
+          h={{ base: 'auto', md: '35vh' }}
+          m="15px"
           cursor="pointer"
           transition="1.5s"
-          _hover={{ w: '530px', h: '37vh' }}
-          bg="blue"
+          _hover={{ transform: 'scale(1.05)' }}
         />
         <Image
           src={props.linkuno}
           alt=""
           className="imagen-trabajos"
-          w="500px"
-          h="35vh"
-          m="15px 5px"
+          w={{ base: '80vw', md: '45%' }}
+          h={{ base: 'auto', md: '35vh' }}
+          m="15px"
           cursor="pointer"
           transition="1.5s"
-          _hover={{ w: '530px', h: '37vh' }}
-          bg="blue"
+          _hover={{ transform: 'scale(1.05)' }}
         />
       </Box>
-      <Box display="flex">
+      <Box display="flex" flexDirection={{ base: 'column', md: 'row' }} flexWrap="wrap" justifyContent="center">
         <Image
           src={props.linkuno}
           alt=""
           className="imagen-trabajos"
-          w="500px"
-          h="35vh"
-          m="15px 5px"
+          w={{ base: '80vw', md: '45%' }}
+          h={{ base: 'auto', md: '35vh' }}
+          m="15px"
           cursor="pointer"
           transition="1.5s"
-          _hover={{ w: '530px', h: '37vh' }}
-          bg="blue"
+          _hover={{ transform: 'scale(1.05)' }}
         />
         <Image
           src={props.linkuno}
           alt=""
           className="imagen-trabajos"
-          w="500px"
-          h="35vh"
-          m="15px 5px"
+          w={{ base: '80vw', md: '45%' }}
+          h={{ base: 'auto', md: '35vh' }}
+          m="15px"
           cursor="pointer"
           transition="1.5s"
-          _hover={{ w: '530px', h: '37vh' }}
-          bg="blue"
+          _hover={{ transform: 'scale(1.05)' }}
         />
       </Box>
     </>
-  )
+  );
 }
