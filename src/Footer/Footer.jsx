@@ -16,7 +16,7 @@ export default function Footer() {
       w="100%"
     >
       <NombreFooter />
-      <NavFooter />
+      <NavFooter/>
       <RedesFooter />
     </Flex>
   )

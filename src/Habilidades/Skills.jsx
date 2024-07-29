@@ -2,11 +2,13 @@ import React from "react"
 import PartesHabilidades from "./PartesHabilidades"
 import MiraMisProyectos from "./MiraMisProyectos"
 import { Box } from "@chakra-ui/react"
+import { Element } from "react-scroll"
 
 function Skills() {
 
     return (
-      <Box h="110vh"
+      <Element name="Habilidades">
+          <Box h="110vh"
         fontWeight="500"
       >
         <PartesHabilidades 
@@ -52,6 +54,9 @@ function Skills() {
         ></PartesHabilidades>
         <MiraMisProyectos></MiraMisProyectos>
       </Box>
+
+      </Element>
+      
     )
   }
   

@@ -2,10 +2,12 @@ import React from 'react';
 import { Box, Flex } from '@chakra-ui/react';
 import TituloProyectos from './TituloProyectos';
 import ImagenesProyectos from './ImagenesProyectos';
+import { Element } from 'react-scroll';
 
 export default function Proyectos() {
   return (
-    <Flex
+    <Element name='Proyectos'>
+        <Flex
       className="seccion-trabajos"
       justifyContent="center"
       alignItems="center"
@@ -26,5 +28,8 @@ export default function Proyectos() {
         <ImagenesProyectos linkuno="https://img.freepik.com/foto-gratis/experiencia-programacion-persona-que-trabaja-codigos-computadora_23-2150010125.jpg" />
       </Box>
     </Flex>
+
+    </Element>
+    
   );
 }

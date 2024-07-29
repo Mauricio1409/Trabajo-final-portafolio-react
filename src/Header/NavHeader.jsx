@@ -1,30 +1,63 @@
 import React from 'react';
-import { Box, Link } from '@chakra-ui/react';
+import { Box } from '@chakra-ui/react';
+import { Link } from 'react-scroll';
 
-export default function NavHeader() {
+export default function NavFooter() {
   return (
     <Box
-      as='nav'
-      display="flex"
+      as="nav"
+      display={{ base: "none", md: 'flex' }}
       margin="0 5px"
       color="#BFE6AD"
-
+      fontSize="10px" // Usar camelCase en lugar de guiones
       justifyContent="center"
       alignItems="center"
     >
-      {['#Hero', '#Sobre-mi', '#Trabajos', '#Contactame'].map((href, index) => (
-        <Box
-          key={index}
-          p="2px 5px"
-          _hover={{ bg: '#BEE5AC', color: '#141A12' }}
-          transition="1.5s"
-          mx="10px"
-        >
-          <Link href={href} textDecor="none">
-            {href.split('#')[1].replace('-', ' ')}
-          </Link>
-        </Box>
-      ))}
+      <Box
+        p="2px 5px"
+        _hover={{ bg: '#BEE5AC', color: '#141A12' }}
+        transition="1.5s"
+      >
+        <Link to="Hero" smooth={true} duration={500} style={{ textDecoration: 'none' }}>
+          Hero
+        </Link>
+      </Box>
+      <Box
+        p="2px 5px"
+        _hover={{ bg: '#BEE5AC', color: '#141A12' }}
+        transition="1.5s"
+      >
+        <Link to="Sobre mi" smooth={true} duration={500} style={{ textDecoration: 'none' }}>
+          Sobre mi
+        </Link>
+      </Box>
+      <Box
+        p="2px 5px"
+        _hover={{ bg: '#BEE5AC', color: '#141A12' }}
+        transition="1.5s"
+      >
+        <Link to="Habilidades" smooth={true} duration={500} style={{ textDecoration: 'none' }}>
+          Habilidades
+        </Link>
+      </Box>
+      <Box
+        p="2px 5px"
+        _hover={{ bg: '#BEE5AC', color: '#141A12' }}
+        transition="1.5s"
+      >
+        <Link to="Proyectos" smooth={true} duration={500} style={{ textDecoration: 'none' }}>
+          Proyectos
+        </Link>
+      </Box>
+      <Box
+        p="2px 5px"
+        _hover={{ bg: '#BEE5AC', color: '#141A12' }}
+        transition="1.5s"
+      >
+        <Link to="Contactame" smooth={true} duration={500} style={{ textDecoration: 'none' }}>
+          Contactame
+        </Link>
+      </Box>
     </Box>
   );
 }
