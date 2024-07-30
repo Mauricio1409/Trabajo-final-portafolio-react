@@ -41,6 +41,9 @@ function HamburgerMenu() {
                 <Link to="Proyectos" smooth={true} duration={500} style={{ textDecoration: 'none', color: '#91ac84', transition: '1.5s' }} onClick={toggleDrawer}>
                   <Box _hover={{ bg: '#BEE5AC', color: '#141A12' }}>Proyectos</Box>
                 </Link>
+                <Link to="Contactame" smooth={true} duration={500} style={{ textDecoration: 'none', color: '#91ac84', transition: '1.5s' }} onClick={toggleDrawer}>
+                  <Box _hover={{ bg: '#BEE5AC', color: '#141A12' }}>Contactame</Box>
+                </Link>
               </VStack>
             </DrawerBody>
           </DrawerContent>

@@ -9,8 +9,8 @@ export default function ImagenesProyectos(props) {
           src={props.linkuno}
           alt=""
           className="imagen-trabajos"
-          w={{ base: '80vw', md: '45%' }}
-          h={{ base: 'auto', md: '35vh' }}
+          w={{ base: '70vw', md: '35vw' }}
+          h={{ base: 'auto', md: '37vh' }}
           m="15px"
           cursor="pointer"
           transition="1.5s"
@@ -20,8 +20,8 @@ export default function ImagenesProyectos(props) {
           src={props.linkuno}
           alt=""
           className="imagen-trabajos"
-          w={{ base: '80vw', md: '45%' }}
-          h={{ base: 'auto', md: '35vh' }}
+          w={{ base: '70vw', md: '35vw' }}
+          h={{ base: 'auto', md: '37vh' }}
           m="15px"
           cursor="pointer"
           transition="1.5s"
@@ -33,8 +33,8 @@ export default function ImagenesProyectos(props) {
           src={props.linkuno}
           alt=""
           className="imagen-trabajos"
-          w={{ base: '80vw', md: '45%' }}
-          h={{ base: 'auto', md: '35vh' }}
+          w={{ base: '70vw', md: '35vw' }}
+          h={{ base: 'auto', md: '37vh' }}
           m="15px"
           cursor="pointer"
           transition="1.5s"
@@ -44,8 +44,8 @@ export default function ImagenesProyectos(props) {
           src={props.linkuno}
           alt=""
           className="imagen-trabajos"
-          w={{ base: '80vw', md: '45%' }}
-          h={{ base: 'auto', md: '35vh' }}
+          w={{ base: '70vw', md: '35vw' }}
+          h={{ base: 'auto', md: '37vh' }}
           m="15px"
           cursor="pointer"
           transition="1.5s"

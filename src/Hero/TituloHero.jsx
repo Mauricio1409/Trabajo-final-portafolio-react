@@ -22,7 +22,7 @@ export default function TituloHero() {
         <Heading 
           as="h1" 
           fontWeight="900" 
-          fontSize={{ base: "30px", md: "60px" }}
+          fontSize={{ base: "35px", md: "60px" }}
         >
           DESARROLLADOR FULL STACK
         </Heading>
@@ -34,13 +34,14 @@ export default function TituloHero() {
       </Box>
       <Box 
         display='flex'
+        textAlign="justify"
         alignItems= "start"
-        paddingLeft= "5%"
-        fontSize={{ base: "12px", md: "15px" }}
+        paddingLeft= {{base: "15%", md: "5%"}}
+        fontSize={{ base: "10px", md: "15px" }}
         color="#F9F4DA"
         w={{ base: "100px", md: "130px" }}
       >
-        <Text>{nombre}</Text>
+        <Text as="p">{nombre}</Text>
       </Box>
     </Box>
   );

@@ -12,8 +12,8 @@ export default function NombreHeader() {
     >
       <Box
         className="nombre-imagen"
-        h="30px"
-        w="60px"
+        h="25px"
+        w="50px"
         bg="#BFE6AD"
         m="5px"
         borderTopRightRadius="25%"

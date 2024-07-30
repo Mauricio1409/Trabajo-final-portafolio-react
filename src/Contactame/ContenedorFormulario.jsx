@@ -1,70 +1,102 @@
 import React from 'react';
-import { Box, FormControl, FormLabel, Input, Textarea, Button, Alert, AlertIcon } from '@chakra-ui/react';
+import { Box, FormControl, FormLabel, Input, Textarea, Button, useToast } from '@chakra-ui/react';
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 
 // Esquema de validación con Yup
-const validationSchema = Yup.object({
-  name: Yup.string().required('El nombre es obligatorio'),
-  email: Yup.string().email('Correo electrónico inválido').required('El correo electrónico es obligatorio'),
+const esquemaDeValidacion = Yup.object({
+  nombre: Yup.string().required('El nombre es obligatorio'),
+  correoElectronico: Yup.string().email('Correo electrónico inválido').required('El correo electrónico es obligatorio'),
   telefono: Yup.string().required('El teléfono es obligatorio'),
-  message: Yup.string().required('El mensaje es obligatorio'),
+  mensaje: Yup.string().required('El mensaje es obligatorio'),
 });
 
 export default function ContenedorFormulario() {
+  const toast = useToast();
+
+  const enviarFormulario = async (valores, setStatus, resetForm, setSubmitting) => {
+    try {
+      const response = await fetch('https://formsubmit.co/mauriciotorti1@gmail.com', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: new URLSearchParams({
+          name: valores.nombre,
+          email: valores.correoElectronico,
+          telefono: valores.telefono,
+          message: valores.mensaje
+        }).toString(),
+      });
+
+      if (response.ok) {
+        setStatus({ submitted: true, error: false });
+        resetForm();
+        toast({
+          title: 'Mensaje enviado con éxito.',
+          status: 'success',
+          duration: 5000,
+          isClosable: true,
+          position: 'bottom-left',
+        });
+      } else {
+        setStatus({ submitted: false, error: true });
+        toast({
+          title: 'Ocurrió un error al enviar el mensaje.',
+          status: 'error',
+          duration: 5000,
+          isClosable: true,
+          position: 'bottom-left',
+        });
+      }
+    } catch (error) {
+      setStatus({ submitted: false, error: true });
+      toast({
+        title: 'Ocurrió un error al enviar el mensaje.',
+        status: 'error',
+        duration: 5000,
+        isClosable: true,
+        position: 'bottom-left',
+      });
+    }
+    setSubmitting(false);
+  };
+
   return (
     <Formik
-      initialValues={{ name: '', email: '', telefono: '', message: '' }}
-      validationSchema={validationSchema}
-      onSubmit={(values, { setSubmitting, resetForm, setStatus }) => {
-        fetch('https://formsubmit.co/mauriciotorti1@gmail.com', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/x-www-form-urlencoded',
-          },
-          body: new URLSearchParams(values).toString(),
-        })
-          .then(response => {
-            if (response.ok) {
-              setStatus({ submitted: true, error: false });
-              resetForm();
-            } else {
-              setStatus({ submitted: false, error: true });
-            }
-            setSubmitting(false);
-          })
-          .catch(() => {
-            setStatus({ submitted: false, error: true });
-            setSubmitting(false);
-          });
+      initialValues={{ nombre: '', correoElectronico: '', telefono: '', mensaje: '' }}
+      validationSchema={esquemaDeValidacion}
+      onSubmit={(valores, { setSubmitting, resetForm, setStatus }) => {
+        setStatus(null); // Restablecer el estado antes de enviar el formulario
+        enviarFormulario(valores, setStatus, resetForm, setSubmitting);
       }}
     >
-      {({ isSubmitting, status }) => (
+      {({ isSubmitting }) => (
         <Form>
           <Box w="100%">
-            <FormControl id="name" isRequired mb="20px">
+            <FormControl id="nombre" isRequired mb="20px">
               <FormLabel>Nombre</FormLabel>
               <Field
                 as={Input}
                 type="text"
-                name="name"
+                name="nombre"
                 placeholder="Ingrese su nombre"
                 borderRadius="30px"
                 p="20px"
               />
-              <ErrorMessage name="name" component="div" style={{ color: 'red' }} />
+              <ErrorMessage name="nombre" component="div" style={{ color: 'red' }} />
             </FormControl>
-            <FormControl id="email" isRequired mb="20px">
-              <FormLabel>Email</FormLabel>
+            <FormControl id="correoElectronico" isRequired mb="20px">
+              <FormLabel>Correo Electrónico</FormLabel>
               <Field
                 as={Input}
                 type="email"
-                name="email"
-                placeholder="Ingrese su email"
+                name="correoElectronico"
+                placeholder="Ingrese su correo electrónico"
                 borderRadius="30px"
                 p="20px"
               />
-              <ErrorMessage name="email" component="div" style={{ color: 'red' }} />
+              <ErrorMessage name="correoElectronico" component="div" style={{ color: 'red' }} />
             </FormControl>
             <FormControl id="telefono" isRequired mb="20px">
               <FormLabel>Teléfono</FormLabel>
@@ -78,32 +110,20 @@ export default function ContenedorFormulario() {
               />
               <ErrorMessage name="telefono" component="div" style={{ color: 'red' }} />
             </FormControl>
-            <FormControl id="message" isRequired mb="20px">
+            <FormControl id="mensaje" isRequired mb="20px">
               <FormLabel>Mensaje</FormLabel>
               <Field
                 as={Textarea}
-                name="message"
+                name="mensaje"
                 placeholder="Ingrese su mensaje"
                 borderRadius="30px"
                 p="20px"
               />
-              <ErrorMessage name="message" component="div" style={{ color: 'red' }} />
+              <ErrorMessage name="mensaje" component="div" style={{ color: 'red' }} />
             </FormControl>
             <Button type="submit" colorScheme="teal" variant="outline" mt="4" w="full" isLoading={isSubmitting}>
               Enviar
             </Button>
-            {status?.submitted && (
-              <Alert status="success" mt="4">
-                <AlertIcon />
-                Mensaje enviado con éxito.
-              </Alert>
-            )}
-            {status?.error && (
-              <Alert status="error" mt="4">
-                <AlertIcon />
-                Ocurrió un error al enviar el mensaje.
-              </Alert>
-            )}
           </Box>
         </Form>
       )}

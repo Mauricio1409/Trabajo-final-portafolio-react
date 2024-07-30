@@ -7,16 +7,18 @@ export default function NavFooter() {
     <Box
       as="nav"
       display={{ base: "none", md: 'flex' }}
-      margin="0 5px"
+      margin="0 7px"
       color="#BFE6AD"
-      fontSize="10px" // Usar camelCase en lugar de guiones
+      fontSize="12px" 
       justifyContent="center"
       alignItems="center"
+      cursor="pointer"
     >
       <Box
         p="2px 5px"
         _hover={{ bg: '#BEE5AC', color: '#141A12' }}
         transition="1.5s"
+        mx=".5vw"
       >
         <Link to="Hero" smooth={true} duration={500} style={{ textDecoration: 'none' }}>
           Hero
@@ -26,6 +28,7 @@ export default function NavFooter() {
         p="2px 5px"
         _hover={{ bg: '#BEE5AC', color: '#141A12' }}
         transition="1.5s"
+         mx=".5vw"
       >
         <Link to="Sobre mi" smooth={true} duration={500} style={{ textDecoration: 'none' }}>
           Sobre mi
@@ -35,6 +38,7 @@ export default function NavFooter() {
         p="2px 5px"
         _hover={{ bg: '#BEE5AC', color: '#141A12' }}
         transition="1.5s"
+         mx=".5vw"
       >
         <Link to="Habilidades" smooth={true} duration={500} style={{ textDecoration: 'none' }}>
           Habilidades
@@ -44,6 +48,7 @@ export default function NavFooter() {
         p="2px 5px"
         _hover={{ bg: '#BEE5AC', color: '#141A12' }}
         transition="1.5s"
+         mx=".5vw"
       >
         <Link to="Proyectos" smooth={true} duration={500} style={{ textDecoration: 'none' }}>
           Proyectos
@@ -53,6 +58,7 @@ export default function NavFooter() {
         p="2px 5px"
         _hover={{ bg: '#BEE5AC', color: '#141A12' }}
         transition="1.5s"
+         mx=".5vw"
       >
         <Link to="Contactame" smooth={true} duration={500} style={{ textDecoration: 'none' }}>
           Contactame

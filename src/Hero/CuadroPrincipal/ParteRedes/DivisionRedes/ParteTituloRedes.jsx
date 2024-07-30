@@ -7,7 +7,7 @@ export default function ParteTituloRedes() {
       m="10px"
       color="#141A12"
       h="50%"
-      fontSize="27px"
+      fontSize="30px"
       letterSpacing="0"
       justifyContent="end"
       alignItems="center"
