@@ -49,3 +49,8 @@ Si tienes alguna pregunta o quieres ponerte en contacto conmigo, puedes enviarme
 
 ## Agradecimientos
 Muchas gracias por ver mi portafolio, espero que te haya gustado.
+
+## Links
+- Deploy en vercel: https://trabajo-final-portafolio-react.vercel.app/
+- Portafolio de inspiracion: https://www.behance.net/gallery/198791443/Developer-Portfolio?tracking_source=search_projects%7Cportfolio+developer&l=58
+  
