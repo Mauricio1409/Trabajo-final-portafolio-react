@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Box, Flex, Text, useDisclosure } from '@chakra-ui/react';
+import { Box, Flex, Text, Tooltip, useDisclosure,  } from '@chakra-ui/react';
 import ModalHabilidad from './ModalHabilidad';
 
 export default function PartesHabilidades(props) {
@@ -22,6 +22,7 @@ export default function PartesHabilidades(props) {
         px={{ base: '3vw', md: '1vw' }}
         py={{ base: '2vh', md: '0' }}
         flexDirection={{ base: 'column', md: 'row' }}
+        fontWeight="600"
       >
         <Box
           display={{ base: 'none', md: 'flex' }}
@@ -39,33 +40,38 @@ export default function PartesHabilidades(props) {
           textAlign="center"
           mb={{ base: '2vh', md: '1vh' }}
         >
-          <Box className="seccion-media-habilidades1" onClick={() => handleOpenModal(props.lenguajeuno, props.imagenuno, props.colorfondo, props.colorletras)}>
+          <Tooltip label="Click para ver proyectos">
+              <Box className="seccion-media-habilidades1" onClick={() => handleOpenModal(props.lenguajeuno, props.imagenuno, props.colorfondo, props.colorletras)}>
 
-            <Box
-              w={{ base: '10vw', md: '5vw' }}
-              h={{ base: '10vh', md: '5vh' }}
-              mb={{ base: '3vh', md: '7vh' }}
-              mx={{ base: '1vw', md: '2vw' }}
-              transition="transform 0.3s ease-in-out"
-              _hover={{ transform: 'scale(1.1)', cursor: 'pointer' }}
-            >
-              {props.urlsvguno}
+                <Box
+                  w={{ base: '10vw', md: '5vw' }}
+                  h={{ base: '10vh', md: '5vh' }}
+                  mb={{ base: '3vh', md: '7vh' }}
+                  mx={{ base: '1vw', md: '2vw' }}
+                  transition="transform 0.3s ease-in-out"
+                  _hover={{ transform: 'scale(1.1)', cursor: 'pointer' }}
+                >
+                  {props.urlsvguno}
+                </Box>
+                <Text className="color-lenguajes" fontSize={{ base: '12px', md: 'inherit' }}>{props.lenguajeuno}</Text>
+              </Box>
+          </Tooltip>
+          <Tooltip label="Click para ver proyectos">
+            <Box className="seccion-media-habilidades2" onClick={() => handleOpenModal(props.lenguajedos, props.imagendos, props.colorfondo, props.colorletras)}>
+              <Box
+                w={{ base: '10vw', md: '5vw' }}
+                h={{ base: '10vh', md: '5vh' }}
+                mb={{ base: '3vh', md: '7vh' }}
+                mx={{ base: '1vw', md: '2vw' }}
+                transition="transform 0.3s ease-in-out"
+                _hover={{ transform: 'scale(1.1)', cursor: 'pointer' }}
+              >
+                {props.urlsvgdos}
+              </Box>
+              <Text className="color-lenguajes" fontSize={{ base: '12px', md: 'inherit' }}>{props.lenguajedos}</Text>
             </Box>
-            <Text className="color-lenguajes" fontSize={{ base: '12px', md: 'inherit' }}>{props.lenguajeuno}</Text>
-          </Box>
-          <Box className="seccion-media-habilidades2" onClick={() => handleOpenModal(props.lenguajedos, props.imagendos, props.colorfondo, props.colorletras)}>
-            <Box
-              w={{ base: '10vw', md: '5vw' }}
-              h={{ base: '10vh', md: '5vh' }}
-              mb={{ base: '3vh', md: '7vh' }}
-              mx={{ base: '1vw', md: '2vw' }}
-              transition="transform 0.3s ease-in-out"
-              _hover={{ transform: 'scale(1.1)', cursor: 'pointer' }}
-            >
-              {props.urlsvgdos}
-            </Box>
-            <Text className="color-lenguajes" fontSize={{ base: '12px', md: 'inherit' }}>{props.lenguajedos}</Text>
-          </Box>
+          </Tooltip>
+          
         </Flex>
 
         <Box

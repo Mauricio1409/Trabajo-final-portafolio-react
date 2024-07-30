@@ -11,7 +11,7 @@ export default function ContenedorContactame() {
       justifyContent="center"
       alignItems="center"
       flexDirection="column"
-      w={{ base: '90%', md: '50%' }}
+      w={{ base: '80%', md: '40%' }}
       minH="70vh"
       bg="#262626"
       borderRadius="20px"

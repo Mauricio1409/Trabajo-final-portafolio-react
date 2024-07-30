@@ -31,7 +31,7 @@ export default function ImagenesProyectos(props) {
       <Box display="flex" flexDirection={{ base: 'column', md: 'row' }} flexWrap="wrap" justifyContent="center">
         <Image
           src={props.linkuno}
-          alt=""
+          alt="Imagen de proyectos"
           className="imagen-trabajos"
           w={{ base: '70vw', md: '35vw' }}
           h={{ base: 'auto', md: '37vh' }}

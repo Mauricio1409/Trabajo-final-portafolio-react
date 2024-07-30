@@ -12,8 +12,8 @@ export default function NombreFooter() {
     >
       <Box
         className="nombre-imagen"
-        h="20px"
-        w="50%"
+        h={{base: "20px", md: "25px"}}
+        w={{base: "40px", md: "50px"}}
         bg="#BFE6AD"
         m="5px"
         borderTopRightRadius="25%"
@@ -22,7 +22,6 @@ export default function NombreFooter() {
       <Box
         className="nombre-texto"
         w="50%"
-        fontSize="10px"
         display="flex"
         alignItems="center"
         justifyContent="center"

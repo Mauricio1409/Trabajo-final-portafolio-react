@@ -9,7 +9,6 @@ export default function NavFooter() {
       display={{ base: "none", md: 'flex' }}
       margin="0 5px"
       color="#BFE6AD"
-      fontSize="10px" // Usar camelCase en lugar de guiones
       justifyContent="center"
       alignItems="center"
     >

@@ -67,13 +67,13 @@ export default function ContenedorFormulario() {
       initialValues={{ nombre: '', correoElectronico: '', telefono: '', mensaje: '' }}
       validationSchema={esquemaDeValidacion}
       onSubmit={(valores, { setSubmitting, resetForm, setStatus }) => {
-        setStatus(null); // Restablecer el estado antes de enviar el formulario
+        setStatus(null);
         enviarFormulario(valores, setStatus, resetForm, setSubmitting);
       }}
     >
       {({ isSubmitting }) => (
         <Form>
-          <Box w="100%">
+          <Box w={{base: "60vw", md: "30vw"}}>
             <FormControl id="nombre" isRequired mb="20px">
               <FormLabel>Nombre</FormLabel>
               <Field
@@ -83,6 +83,7 @@ export default function ContenedorFormulario() {
                 placeholder="Ingrese su nombre"
                 borderRadius="30px"
                 p="20px"
+                w="100%"
               />
               <ErrorMessage name="nombre" component="div" style={{ color: 'red' }} />
             </FormControl>

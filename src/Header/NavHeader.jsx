@@ -9,7 +9,6 @@ export default function NavFooter() {
       display={{ base: "none", md: 'flex' }}
       margin="0 7px"
       color="#BFE6AD"
-      fontSize="12px" 
       justifyContent="center"
       alignItems="center"
       cursor="pointer"

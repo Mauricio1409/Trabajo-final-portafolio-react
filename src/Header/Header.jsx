@@ -24,7 +24,7 @@ function Header() {
 
     >
       <NombreHeader />
-      <Box display={{ base: 'none', md: 'flex' }} justifyContent="space-around" w="66%">
+      <Box display={{ base: 'none', md: 'flex' }} justifyContent="space-around" w="85%">
         <NavHeader />
         <Redes />
       </Box>

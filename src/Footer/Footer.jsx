@@ -14,6 +14,8 @@ export default function Footer() {
       alignItems="center"
       h="25vh"
       w="100%"
+      fontWeight="600"
+      fontSize="12px"
     >
       <NombreFooter />
       <NavFooter/>
